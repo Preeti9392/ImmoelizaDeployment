@@ -1,43 +1,43 @@
 # app.py
-from fastapi import FastAPI#, HTTPException
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from typing import Optional, str,dict,int,float
+from typing import Optional
 from preprocessing.cleaning_data import preprocess
 from predict.prediction import predict
 
 app = FastAPI()
 
 class input_data(BaseModel):
-    type: str
-    subtype: str
-    bedroomCount: float
-    toilet_and_bath: float
-    province: str
-    locality: str
-    postcode: int
-    habitableSurface: float
-    buildingCondition: Optional[str] = None
-    facedeCount: Optional[float] = None
-    hasTerrace: bool
-    epcScore: Optional[str] = None
-    totalParkingCount: float
+    
+  bedroomCount:  float
+  toilet_and_bath:  float
+  habitableSurface: float
+  facedeCount: Optional[float] = None
+  hasTerrace:bool
+  totalParkingCount: float
+  type: str
+  subtype: str
+  province: str
+  locality: str
+  postCode: int
+  buildingCondition: Optional[str] = None
+  epcScore: Optional[str] = None
+
 
 @ app.get("/")
-def health():
+async def health():
     return{"status":"alive"}
 
 @ app.get("/predict")
-def data_format_predictions():
+async def data_format_predictions():
     return{"message":"The post request should be in json format"}
 
 @ app.post("/predict")
-def get_predictions(json_input:input_data):
+async def get_predictions(data:input_data):
     try:
         
-        preprocessed_data=preprocess(json_input)
-        price=predict(preprocessed_data:dict)
+        preprocessed_data=preprocess(data.dict())
+        price=predict(preprocessed_data)
         return{"prediction":price, "status_code":200}
     except Exception as e:
-            Raise ValueError(f"Error in predict: {e}")
-        
-
+            raise HTTPException(f"Error: {e}")
