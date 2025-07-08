@@ -32,15 +32,15 @@ The repository is organized into a clear and modular structure to separate conce
 
 ├── model/
 
-  └── (trained_model.pkl)
+        └── (trained_model.pkl)
 
 ├── predict/
 
-  └── prediction.py
+        └── prediction.py
 
 ├── preprocessing/
 
-│   └── cleaning_data.py
+         └── cleaning_data.py
 
 ├── requirements.txt
 
@@ -56,15 +56,15 @@ The repository is organized into a clear and modular structure to separate conce
 
 model/: Contains the pre-trained machine learning model.
 
-└──>Contains pkl file of pretrained model.
+        └──>Contains pkl file of pretrained model.
 
 predict/: Houses the logic for making predictions using the loaded model.
 
-└──>prediction.py: Contains the predict() function.
+        └──>prediction.py: Contains the predict() function.
 
 preprocessing/: Contains modules for data cleaning and transformation.
 
-└──>cleaning_data.py: Contains the preprocess() function.
+        └──>cleaning_data.py: Contains the preprocess() function.
 
 requirements.txt: Lists all Python dependencies.
 
