@@ -31,26 +31,39 @@ Use Streamlit to Create API and deploy it on Streamlit Cloud.
 The repository is organized into a clear and modular structure to separate concerns:
 
 ├── model/
-│   └── (trained_model.pkl)
+
+  └── (trained_model.pkl)
+
 ├── predict/
-│   └── prediction.py
+
+  └── prediction.py
+
 ├── preprocessing/
+
 │   └── cleaning_data.py
+
 ├── requirements.txt
+
 ├── app.py
+
 ├── Dockerfile
+
 ├── streamlit_app.py
+
 └── README.md
 
 # Project Structure
 
 model/: Contains the pre-trained machine learning model.
+
 └──>Contains pkl file of pretrained model.
 
 predict/: Houses the logic for making predictions using the loaded model.
+
 └──>prediction.py: Contains the predict() function.
 
 preprocessing/: Contains modules for data cleaning and transformation.
+
 └──>cleaning_data.py: Contains the preprocess() function.
 
 requirements.txt: Lists all Python dependencies.
@@ -82,17 +95,23 @@ Streamlit Cloud: For Streamlit Deployment
 # Local Setup & Installation
 
 To run this API locally for development or testing:
+
 Clone the repository:
 
 Bash:
+
 git clone git@github.com:Preeti9392/ImmoelizaDeployment.git
+
 cd ImmoelizaDeployment
 
 # Create a virtual environment
 
 Bash:
+
 python -m venv venv
+
 On Windows-->          .\venv\Scripts\activate
+
 On macOS/Linux-->      source venv/bin/activate
 
 # Install dependencies:
