@@ -100,9 +100,9 @@ Clone the repository:
 
 Bash:
 
-git clone git@github.com:Preeti9392/ImmoelizaDeployment.git
+        git clone git@github.com:Preeti9392/ImmoelizaDeployment.git
 
-cd ImmoelizaDeployment
+        cd ImmoelizaDeployment
 
 # Create a virtual environment
 
@@ -110,9 +110,11 @@ Bash:
 
 python -m venv venv
 
-On Windows-->          .\venv\Scripts\activate
+On Windows-->        
+        .\venv\Scripts\activate
 
-On macOS/Linux-->      source venv/bin/activate
+On macOS/Linux-->     
+         source venv/bin/activate
 
 # Install dependencies:
 
@@ -134,7 +136,8 @@ Response Body (Error)
 
 # DeployedApp Url
 
-On render::
+On render:
+
 https://immoelizaprediction-latest.onrender.com
 
 On StreamlitCloud:
