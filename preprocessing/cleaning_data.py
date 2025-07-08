@@ -1,10 +1,8 @@
 import pandas as pd
 
-Columns = ["bedroomCount", "toilet_and_bath", "habitableSurface", "facedeCount",
-    "hasTerrace", "totalParkingCount",
-    "type", "subtype", "province", "locality",
-    "postCode", "buildingCondition", "epcScore"
-]
+Columns = ["bedroomCount", "toilet_and_bath", "habitableSurface", "facedeCount","hasTerrace", "totalParkingCount",
+            "type", "subtype", "province", "locality","postCode", "buildingCondition", "epcScore"]
+
 categorical_columns = ["type", "subtype", "province", "locality",  "buildingCondition", "postCode","epcScore"]
 def preprocess(input_data:dict):
     try:
