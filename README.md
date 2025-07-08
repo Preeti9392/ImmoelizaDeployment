@@ -4,12 +4,19 @@ Real Estate Price Prediction API
 Project Name: ImmoelizaDeployment
 ## Table of Contents
 ──> Overview
+
 ──> Mission Objectives
+
 ──> Key Features
+
 ──> Project Structure
+
 ──> Technologies Used
+
 ──> Local Setup & Installation
+
 ──> FastAPI Automatic Documentation
+
 ──> Deployment on Render.com
 
 
